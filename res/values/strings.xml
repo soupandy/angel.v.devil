@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">hello</string>
+    <string name="app_name">Angel.v.Devil</string>
+    <string name="about">Game Idea by:\nSteveteleios\nCode, sounds and graphics by:\nAndy Soup\n\n\n\n&#8230;\nThanks for playing</string>
+    <string name="show3d">3d</string>
+    <string name="music">music</string>
+    <string name="showgl">use GL</string>
+    <string name="RandomMaze">Random Maze</string>
+    <string name="loading">Loading\nPlease\nwait</string>
+    <string name="invertaxis">Gravity Swap</string>
+    <string name="thirdperson">3rd person</string>
+    <string name="bigmaze">big</string>
+	<string-array name="accuracy">
+	<item>Accurate</item>
+	<item>Medium</item>
+	<item>Rough &amp; fast</item>
+</string-array>
+	<string name="cheat">cheat</string>
+</resources>

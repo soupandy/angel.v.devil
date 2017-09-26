@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/clouds" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical">
+	<LinearLayout android:id="@+id/linearLayout1"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:orientation="vertical">
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+
+			<CheckBox android:id="@+id/view3d" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/show3d" />
+			<CheckBox android:id="@+id/music" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/music" />
+			<CheckBox android:id="@+id/randommaze" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/RandomMaze"
+				android:visibility="gone" />
+			<CheckBox android:id="@+id/viewgl" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/showgl" />
+			<CheckBox android:id="@+id/cheat" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/cheat"
+				android:visibility="gone" />
+		</LinearLayout>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<CheckBox android:id="@+id/invertaxis" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/invertaxis" />
+			<CheckBox android:id="@+id/thirdperson"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/thirdperson" />
+			<CheckBox android:id="@+id/bigmaze" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/bigmaze"
+				android:visibility="gone" />
+			<Spinner android:id="@+id/accuracy" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:entries="@array/accuracy"
+				android:layout_weight="1" />
+			<TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="Accuracy"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+		</LinearLayout>
+		<Button android:id="@+id/button1" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="@android:string/ok" />
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="match_parent" android:orientation="horizontal">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center_horizontal"
+				android:text="@string/about" android:scrollbars="vertical"
+				android:maxLines="7" android:id="@+id/abouttext" android:textSize="25sp" />
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<Button android:id="@+id/levelup" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="^" />
+
+				<TextView android:id="@+id/level" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="1"
+					android:gravity="center" android:textAppearance="?android:attr/textAppearanceMedium" />
+
+				<Button android:id="@+id/leveldown" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="v" />
+
+			</LinearLayout>
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

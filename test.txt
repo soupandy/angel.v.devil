@@ -1,0 +1,4 @@
+angel at emulator 5554
+telnet localhost:5554
+redir add tcp:7777:7777
+devil client connect to 10.0.2.2

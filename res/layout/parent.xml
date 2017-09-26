@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/hell"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="5" >
+
+        <SurfaceView
+            android:id="@+id/surfaceView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" 
+        android:id="@+id/controlLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" 
+        android:contentDescription="SideBar"
+        android:layout_weight="1">
+        <ImageButton
+        android:id="@+id/mapButton"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/map"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        android:text="Map" />
+        <ImageButton
+        android:id="@+id/pauseButton"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/pause"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        android:text="Pause" />
+        <ImageButton
+        android:id="@+id/settingsButton"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/settings"
+        android:background="@android:color/transparent"
+        android:text="Settings" />
+        <ImageButton
+        android:id="@+id/testButton"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/test"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:text="Test" />
+       <ImageButton
+        android:id="@+id/quitButton"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/quit"
+        android:background="@android:color/transparent"
+        android:text="Quit" />
+        
+    </LinearLayout>
+</LinearLayout>
