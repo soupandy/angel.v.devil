@@ -17,11 +17,11 @@ Thankfully somewhere in the maze there is also a bright spike. The angel can use
 The angel is controlled with swipes, and, in GL mode, the control buttons at the edges of the screen.
 
  **Swipe** | Button | **to move** 
- -------------------|---|-----
- from left to right | > | right 
- from right to left | < | left 
+ :-------------------:|:---:|:-----:
+ from left to right | > | right
+ from right to left | < | left
  from bottom to top | ^ | up
- from top to bottom | v | down |
+ from top to bottom | v | down
  Single tap | . | halt
  
 
@@ -40,7 +40,7 @@ GL mode used openGL for the rendering and follows the player
 3rd person mode moves the camera behind the player and modifies the controls so that
 
  **Swipe** | in order   | direction
- --------------|-------|-------------
+ :--------------:|:-------:|:-------------:
  left to right | | right |
  right to left | **To Turn** | left |
  top to bottom |  | back |
@@ -83,15 +83,17 @@ The game will start only after **both** players touch Start
 
 *   On the other phone, touch the devil on the right to join a network game as the devil. A pop up window will ask you for the IP address of the phone the angel is playing on. Touch "Suggest" to let your phone autotype the first three numbers, and fill in the IP address from your the phone of your friend playing the angel. Touch ok and wait for the connection.
 
-| Angel connected screen:
-![](angelconnect.png)
- | Devil connected screen:
-![](devilconnect.png)
- |
+
+
+ Angel connected screen | Devil connected screen
+ :---------------------:|:----------------------:
+ Angel                  |Devil
+![](angelconnect.png)   |![](devilconnect.png)
+ 
 
 ## Settings Screen
 
-<div align="center">![](options.png)</div>
+![](options.png)
 
 | **Toggles**
  | **Use**
