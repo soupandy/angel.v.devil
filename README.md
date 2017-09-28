@@ -16,14 +16,24 @@ Thankfully somewhere in the maze there is also a bright spike. The angel can use
 
 The angel is controlled with swipes, and, in GL mode, the control buttons at the edges of the screen.
 
- **Swipe** | Button | **to move** 
- :-------------------:|:---:|:-----:
- from left to right | > | right
- from right to left | < | left
- from bottom to top | ^ | up
- from top to bottom | v | down
- Single tap | . | halt
- 
+| **Swipe** | Button
+ | **to move** |
+| from left to right | >
+ | right |
+| from right to left | <
+ | left |
+| from bottom to top
+ | ^
+ | up
+ |
+| from top to bottom
+ | v
+ | down
+ |
+| Single tap
+ | .
+ | halt
+ |
 
 If your phone supports it, it is also possible to move using gravity.
 To play with gravity it must be enabled in the start screen.
@@ -33,29 +43,33 @@ The angel will be able to collect stars in the maze to increase the score.
 
 ## Display modes
 
+| 
+
 There are various display modes.
-Plain mode shows the complete map  in a simple way.
+Plain mode shows the complete map  in a simple way.
 3d mode has a little more perspective but still displays the whole map.
 GL mode used openGL for the rendering and follows the player
 3rd person mode moves the camera behind the player and modifies the controls so that
 
- **Swipe** | in order   | direction
- :--------------:|:-------:|:-------------:
- left to right | | right |
- right to left | **To Turn** | left |
- top to bottom |  | back |
- bottom to top | **To move** | forward |
- Single tap | **To** | halt
+| **Swipe** |
+| left to right | right |
+| right to left | **To Turn** | left |
+| top to bottom | back |
+| bottom to top | **To move** | forward |
+| Single tap | **To**
+ | halt
+ |
 
-Example screen | ....
-----------|---------------
- Plain mode: | 3d mode:
-![](help/plain.png) | ![](help/v3d.png) 
-----------|---------------
- Gl mode: |3rd person mode:
-![](help/gl.png) | ![](help/thirdperson.png) 
+ | 
 
- 
+| Plain mode:
+![](plain.png) | 3d mode:
+![](v3d.png) |
+| Gl mode:
+![](gl.png) | 3rd person mode:
+![](thirdperson.png) |
+
+ |
 
 ## Network mode
 
@@ -83,17 +97,15 @@ The game will start only after **both** players touch Start
 
 *   On the other phone, touch the devil on the right to join a network game as the devil. A pop up window will ask you for the IP address of the phone the angel is playing on. Touch "Suggest" to let your phone autotype the first three numbers, and fill in the IP address from your the phone of your friend playing the angel. Touch ok and wait for the connection.
 
-
-
- Angel connected screen | Devil connected screen
- :---------------------:|:----------------------:
- Angel                  |Devil
-![](help/angelconnect.png)   |![](help/devilconnect.png)
- 
+| Angel connected screen:
+![](angelconnect.png)
+ | Devil connected screen:
+![](devilconnect.png)
+ |
 
 ## Settings Screen
 
-![](help/options.png)
+<div align="center">![](options.png)</div>
 
 | **Toggles**
  | **Use**
@@ -118,7 +130,7 @@ Touch OK to close the settings screen and go back.
 
 ## Game Screen
 
-<div align="center">![](help/thirdperson.png)
+<div align="center">![](thirdperson.png)
 Here the player tries to win the level by reaching the maze exit at the bottom right.
 Use the controls to move the angel, escaping the devil, or using the hammer to dazzle him, find the spike and exit the maze.
 Right side controls:
@@ -145,11 +157,11 @@ Using the door to exit will resign the game, the devil will be considered the wi
 ## High Scores table
 
 <div align="center">If you score is high enough, when the game ends you will be prompted for your name:
-![](help/hiscores.png)
+![](hiscores.png)
 
 Touch the white area next to Name, type your name and then ok.
 Your name will appear in the list:
-![](help/hiscoresok.png)
+![](hiscoresok.png)
 Touch OK at the top of the screen to go back to the start screen.
 
 </div>
