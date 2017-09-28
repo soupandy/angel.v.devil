@@ -33,22 +33,21 @@ The angel will be able to collect stars in the maze to increase the score.
 
 ## Display modes
 
-
-
 There are various display modes.
 Plain mode shows the complete map  in a simple way.
 3d mode has a little more perspective but still displays the whole map.
 GL mode used openGL for the rendering and follows the player
 3rd person mode moves the camera behind the player and modifies the controls so that
 
- **Swipe** |      |
+ **Swipe** | in order   | direction
  --------------|-------|-------------
- left to right | right |
+ left to right | | right |
  right to left | **To Turn** | left |
- top to bottom | back |
+ top to bottom |  | back |
  bottom to top | **To move** | forward |
  Single tap | **To** | halt
 
+Example screen | ....
 ----------|---------------
  Plain mode: | 3d mode:
 ![](plain.png) | ![](v3d.png) 
