@@ -129,11 +129,14 @@ Using the door to exit will resign the game, the devil will be considered the wi
 ## High Scores table
 
 If you score is high enough, when the game ends you will be prompted for your name:
+
 ![](hiscores.png)
 
 Touch the white area next to Name, type your name and then ok.
 Your name will appear in the list:
+
 ![](hiscoresok.png)
+
 Touch OK at the top of the screen to go back to the start screen.
 
 
