@@ -95,21 +95,13 @@ The game will start only after **both** players touch Start
 
 ![](options.png)
 
-| **Toggles**
- | **Use**
- |
-| 3d | enables the perspective view of the map |
-| music | turns music on or off
- |
-| use GL
- | enable/disable use of openGL game view
- |
-| Gravity Swap
- | Interchanges the x-y controls for gravity (when accelerometer is in use)
- |
-| 3rd person
- | Modifies controls for third person, and moves camera behind player in GL mode
- |
+ **Toggles** | **Use** 
+ 3d | enables the perspective view of the map 
+ music | turns music on or off
+ use GL | enable/disable use of openGL game view
+ Gravity Swap | Interchanges the x-y controls for gravity (when accelerometer is in use)
+ 3rd person | Modifies controls for third person, and moves camera behind player in GL mode
+ 
 
 <div align="center">
 If no game is in progress the player can also select the starting level here.
@@ -118,29 +110,19 @@ Touch OK to close the settings screen and go back.
 
 ## Game Screen
 
-<div align="center">![](thirdperson.png)
+![](thirdperson.png)
 Here the player tries to win the level by reaching the maze exit at the bottom right.
 Use the controls to move the angel, escaping the devil, or using the hammer to dazzle him, find the spike and exit the maze.
 Right side controls:
-</div>
 
-| Map Icon
- | To toggle use of GL
- |
-| Pause
- | To pause/unpause the game
- |
-| Settings
- | To enter the settings screen. This will automatically pause the game
- |
-| Door
- | To exit
- |
 
-<div align="center">
+ Map Icon | To toggle use of GL
+ Pause | To pause/unpause the game
+  Settings | To enter the settings screen. This will automatically pause the game
+  Door | To exit
+ 
 Using the door to exit will resign the game, the devil will be considered the winner and the game will end.
 
-</div>
 
 ## High Scores table
 
