@@ -50,10 +50,10 @@ GL mode used openGL for the rendering and follows the player
 Example screen | ....
 ----------|---------------
  Plain mode: | 3d mode:
-![](plain.png) | ![](v3d.png) 
+![](help/plain.png) | ![](help/v3d.png) 
 ----------|---------------
  Gl mode: |3rd person mode:
-![](gl.png) | ![](thirdperson.png) 
+![](help/gl.png) | ![](help/thirdperson.png) 
 
  
 
@@ -88,12 +88,12 @@ The game will start only after **both** players touch Start
  Angel connected screen | Devil connected screen
  :---------------------:|:----------------------:
  Angel                  |Devil
-![](angelconnect.png)   |![](devilconnect.png)
+![](help/angelconnect.png)   |![](help/devilconnect.png)
  
 
 ## Settings Screen
 
-![](options.png)
+![](help/options.png)
 
 | **Toggles**
  | **Use**
@@ -118,7 +118,7 @@ Touch OK to close the settings screen and go back.
 
 ## Game Screen
 
-<div align="center">![](thirdperson.png)
+<div align="center">![](help/thirdperson.png)
 Here the player tries to win the level by reaching the maze exit at the bottom right.
 Use the controls to move the angel, escaping the devil, or using the hammer to dazzle him, find the spike and exit the maze.
 Right side controls:
@@ -145,11 +145,11 @@ Using the door to exit will resign the game, the devil will be considered the wi
 ## High Scores table
 
 <div align="center">If you score is high enough, when the game ends you will be prompted for your name:
-![](hiscores.png)
+![](help/hiscores.png)
 
 Touch the white area next to Name, type your name and then ok.
 Your name will appear in the list:
-![](hiscoresok.png)
+![](help/hiscoresok.png)
 Touch OK at the top of the screen to go back to the start screen.
 
 </div>
