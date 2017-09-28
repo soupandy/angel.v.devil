@@ -16,24 +16,14 @@ Thankfully somewhere in the maze there is also a bright spike. The angel can use
 
 The angel is controlled with swipes, and, in GL mode, the control buttons at the edges of the screen.
 
-| **Swipe** | Button
- | **to move** |
-| from left to right | >
- | right |
-| from right to left | <
- | left |
-| from bottom to top
- | ^
- | up
- |
-| from top to bottom
- | v
- | down
- |
-| Single tap
- | .
- | halt
- |
+ **Swipe** | Button | **to move** 
+ -------------------|---|-----
+ from left to right | > | right 
+ from right to left | < | left 
+ from bottom to top | ^ | up
+ from top to bottom | v | down |
+ Single tap | . | halt
+ 
 
 If your phone supports it, it is also possible to move using gravity.
 To play with gravity it must be enabled in the start screen.
