@@ -96,6 +96,7 @@ The game will start only after **both** players touch Start
 ![](options.png)
 
  **Toggles** | **Use** 
+ :---------------------:|:----------------------:
  3d | enables the perspective view of the map 
  music | turns music on or off
  use GL | enable/disable use of openGL game view
@@ -115,7 +116,8 @@ Here the player tries to win the level by reaching the maze exit at the bottom r
 Use the controls to move the angel, escaping the devil, or using the hammer to dazzle him, find the spike and exit the maze.
 Right side controls:
 
-
+Icon|Use
+:---------------------:|:----------------------:
  Map Icon | To toggle use of GL
  Pause | To pause/unpause the game
   Settings | To enter the settings screen. This will automatically pause the game
@@ -126,7 +128,7 @@ Using the door to exit will resign the game, the devil will be considered the wi
 
 ## High Scores table
 
-<div align="center">If you score is high enough, when the game ends you will be prompted for your name:
+If you score is high enough, when the game ends you will be prompted for your name:
 ![](hiscores.png)
 
 Touch the white area next to Name, type your name and then ok.
@@ -134,4 +136,4 @@ Your name will appear in the list:
 ![](hiscoresok.png)
 Touch OK at the top of the screen to go back to the start screen.
 
-</div>
+
