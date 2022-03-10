@@ -26,11 +26,11 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
 	angelVdevilActivity parent;
 	Tile[][] myMaze;
 	int maze_width,maze_height;
-	Spikes spike;
+	Key key;
 	Hammer hammer;
-	Field field;
+	Door door;
 	
-	ModelObj glDevil,glRobe,glHalo,glEyes,glHead,glYEyes;
+	ModelObj glDevil,glRobe,glHalo,glWings,glEyes,glHead,glYEyes;
 	
 	void render_item(int x,int y,int i,GL10 gl) {
 
@@ -47,10 +47,10 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
 			}
 			if (i==2) {
 				set_glcolor_mode(gl);
-				spike.x=xf+0.05f;
-				spike.y=yf+0.05f;
-				spike.z=zf+0.05f;
-				spike.draw(gl);
+				key.x=xf+0.05f;
+				key.y=yf+0.05f;
+				key.z=zf+0.05f;
+				key.draw(gl);
 				set_glplain_mode(gl);
 			}
 			if (i==3) {
@@ -65,10 +65,11 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
 			}
 			if (i==4) {
 				set_glcolor_mode(gl);
-				field.x=xf+0.05f;
-				field.y=yf+0.05f;
-				field.z=zf+0.05f;
-				field.draw(gl);
+				door.x=xf+0.05f+(parent.dooropen?0.04f:0);
+				door.y=yf+0.05f;
+				door.z=zf+0.05f;
+				door.angle=parent.dooropen?-45:0;
+				door.draw(gl);
 				set_glplain_mode(gl);
 			}
 
@@ -142,13 +143,14 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
         copyMaze();
         glDevil=new ModelObj(context,"devil.obj",8f,0.5f,0f,0f,0f,0f);
         glHalo=new ModelObj(context,"halo.obj",8f,1f,1f,0f,0f,0f);
+        glWings=new ModelObj(context,"wings.obj",8f,1f,1f,0f,0f,0f);
         glRobe=new ModelObj(context,"robe.obj",8f,1f,0f,1f,0f,0f);
         glEyes=new ModelObj(context,"eyes.obj",8f,1f,1f,1f,0f,0f);
         glYEyes=new ModelObj(context,"eyes.obj",8f,1f,1f,0f,0f,0f);
         glHead=new ModelObj(context,"head.obj",8f,1f,0.8f,0.8f,0f,0f);
-        spike=new Spikes();
+        key=new Key();
         hammer=new Hammer();
-        field=new Field();
+        door=new Door();
      }
 
     private int countWalls() {
@@ -294,11 +296,11 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
         
         glTranslatef(-6,0,0);
         gl.glColor4f(0,.8f,1,1);
-        Letter.drawtriangle(gl, 0, 0, 0.1f, 2, 8f, 0.1f, 0, 7.5f, 0.1f);
-        Letter.drawtriangle(gl, 0, 0, 0.1f, 2, 8f, 0.1f, 2, 0, 0.1f);
+        Letter.drawtriangle(gl, 0, 0, 0.1f, 2, 10f, 0.1f, 0, 9.5f, 0.1f);
+        Letter.drawtriangle(gl, 0, 0, 0.1f, 2, 10f, 0.1f, 2, 0, 0.1f);
 
         mLvl.moveto(3.5f, 0);
-        mLvl.draw(gl,3);
+        mLvl.draw(gl,4);
         Letter.line_width=7;
         gl.glColor4f(0,0,1,1);
         
@@ -321,12 +323,12 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
         	hammer.draw(gl);
         	gl.glPopMatrix();
         }
-        if (parent.havespike) {
-        	spike.x=spike.y=spike.z=0;
+        if (parent.havekey) {
+        	key.x=key.y=key.z=0;
         	gl.glPushMatrix();
         	gl.glRotatef(180f, 1, 0, 0);
         	gl.glTranslatef(-0.3f, -0.2f, 0f);
-        	spike.draw(gl);
+        	key.draw(gl);
         	gl.glPopMatrix();
         }
         
@@ -397,19 +399,19 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
 			
 			
 			
-				if (parent.havespike) {
-			  spike.x=xf+0.05f;
-			  spike.y=yf+0.05f;
-			  spike.z=zf;
+				if (parent.havekey) {
+			  key.x=xf+0.05f;
+			  key.y=yf+0.05f;
+			  key.z=zf;
 			  gl.glPushMatrix();
-			  gl.glTranslatef(2*spike.x, 2*spike.y, -0.01f+2*spike.z);
+			  gl.glTranslatef(2*key.x, 2*key.y, -0.01f+2*key.z);
 			  
 			  gl.glRotatef(glRobe.tangle,0,0,1);
 			  gl.glRotatef(90f,1, 0, 0);
 			  gl.glRotatef(-60f,0, 1, 0);
-		 	 gl.glTranslatef(-2*spike.x-0.1f, -2*spike.y, -2*spike.z);
+		 	 gl.glTranslatef(-2*key.x-0.1f, -2*key.y, -2*key.z);
 		 	 
-			  spike.draw(gl);
+			  key.draw(gl);
 			  gl.glPopMatrix();
 }
 			
@@ -433,12 +435,18 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
 			glHalo.x_translate=xf+0.05f;
 			glHalo.y_translate=yf+0.05f;
 			glHalo.z_translate=zf;
+			glWings.x_translate=xf+0.05f;
+			glWings.y_translate=yf+0.05f;
+			glWings.z_translate=zf;
 			glEyes.x_translate=xf+0.05f;
 			glEyes.y_translate=yf+0.05f;
 			glEyes.z_translate=zf;
 			glEyes.setdirection(1+((4-parent.playerDir)%4));
+			glWings.setdirection(1+((4-parent.playerDir)%4));
 			glEyes.angle=glRobe.tangle;
+			glWings.angle=glRobe.tangle;
 			glEyes.sync_angle();
+			glWings.sync_angle();
 			glHead.x_translate=xf+0.05f;
 			glHead.y_translate=yf+0.05f;
 			glHead.z_translate=zf;
@@ -498,6 +506,7 @@ public class MazeRenderer implements GLSurfaceView.Renderer{
         set_glcolor_mode(gl);
         glRobe.draw(gl);
         glHalo.draw(gl);
+        glWings.draw(gl);
         glEyes.draw(gl);
         glHead.draw(gl);
         glDevil.draw(gl);

@@ -133,6 +133,7 @@ public class NetCommunicator {
 					.findViewById(R.id.dialogButtonCancel);
 			dialogButton.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
+//					((angelVdevilActivity) context).network=false;
 					dialog.dismiss();
 				}
 			});

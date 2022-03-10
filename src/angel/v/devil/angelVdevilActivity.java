@@ -108,7 +108,8 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	public boolean network = false;
 	public boolean network_devil = false;
 	public boolean playing = false;
-	boolean havespike = false;
+	boolean havekey = false;
+	boolean dooropen = false;
 	boolean havehammer = false;
 	int devildizzy = 0;
 	private boolean level_unraised = true;
@@ -707,7 +708,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 			if (myMaze[ax][ay].item == 2) {
 				score += 10;
 				myMaze[ax][ay].item = 0;
-				havespike = true;
+				havekey = true;
 				if (play_sounds)
 					mpDing.start();
 			}
@@ -718,10 +719,12 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 				if (play_sounds)
 					mpDing.start();
 			}
+			if (myMaze[ax][ay].item != 4) {dooropen=false;}
 			if (myMaze[ax][ay].item == 4) {
-				score += 50;
-				myMaze[ax][ay].item = 0;
-				havespike = false;
+				if (havekey) score += 50;
+				//myMaze[ax][ay].item = 0;
+				havekey = false;
+				dooropen=true;
 				if (play_sounds)
 					mpSwisss.start();
 			}
@@ -1444,6 +1447,41 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 		ys = 0;
 		pys = 0;
 		fill_maze();
+		/*
+		int xoff=r.nextInt(maze_height / 4 - 1) * 2+2;
+		int yoff=r.nextInt(maze_width / 4 - 1) * 2+2;
+		horizontal_road(xs, ys, xoff);
+		vertical_road(xoff, ys, yoff);
+		node_walls(xs, ys, xoff, yoff);
+		start_walls(xs, ys, xoff, yoff);
+		horizontal_road(xoff, yoff,xs);
+		vertical_road(xs, yoff, ys);
+		node_walls(xoff,yoff,xs,ys);
+		start_walls(xoff,ys,xs,ys);
+		*/
+		for (f = 0; f < 1; f++) {
+			ye = r.nextInt(maze_height / 2 - 1) * 2 + 2;
+			xe = r.nextInt(maze_width / 2 - 1) * 2 + 2;
+			horizontal_road(xs, ys, xe);
+			vertical_road(xe, ys, ye);
+			node_walls(xs, ys, xe, ye);
+			start_walls(xs, pys, xe, ys);
+			pys = ys;
+			xs = xe;
+			ys = ye;
+		}
+		for (f = 0; f < 1; f++) {
+			ye = 0;
+			xe = 0;
+			horizontal_road(xs, ys, xe);
+			vertical_road(xe, ys, ye);
+			node_walls(xs, ys, xe, ye);
+			start_walls(xs, pys, xe, ys);
+			pys = ys;
+			xs = xe;
+			ys = ye;
+		}
+		
 		for (f = 0; f < 10; f++) {
 			ye = r.nextInt(maze_height / 2) * 2;
 			xe = r.nextInt(maze_width / 2) * 2;
@@ -1846,6 +1884,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	}
 
 	void new_game(boolean run) {
+		dooropen=false;
 		playerXgoing = 0;
 		playerYgoing = 0;
 		playerXdir = 0;
@@ -1855,7 +1894,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 		paused = false;
 		level_unraised = true;
 		havehammer = false;
-		havespike = false;
+		havekey = false;
 		devildizzy = 0;
 		if (!playing) {
 			score = 0;
@@ -2011,7 +2050,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	}
 
 	boolean angel_north_available(int x, int y, int z) {
-		if (havespike)
+		if (havekey)
 			return north_available(x, y, z);
 		if (out_of_bounds(x, y))
 			return false;
@@ -2049,7 +2088,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	}
 
 	boolean angel_south_available(int x, int y, int z) {
-		if (havespike)
+		if (havekey)
 			return south_available(x, y, z);
 		if (out_of_bounds(x, y))
 			return false;
@@ -2087,7 +2126,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	}
 
 	boolean angel_west_available(int x, int y, int z) {
-		if (havespike)
+		if (havekey)
 			return west_available(x, y, z);
 		if (out_of_bounds(x, y))
 			return false;
@@ -2125,7 +2164,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 	}
 
 	boolean angel_east_available(int x, int y, int z) {
-		if (havespike)
+		if (havekey)
 			return east_available(x, y, z);
 		if (out_of_bounds(x, y))
 			return false;
@@ -3267,7 +3306,7 @@ public class angelVdevilActivity extends Activity implements SensorEventListener
 					network = true;
 					network_devil = true;
 					myComm.clientDialog();
-				}
+				} 
 			}
 		}
 
